@@ -8,6 +8,8 @@ gem 'jquery-rails'
 gem 'turbolinks'
 
 gem 'jbuilder', '~> 1.2'
+gem 'sass'
+gem 'haml'
 
 group 'test' do
   gem 'database_cleaner'
