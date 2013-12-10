@@ -9,7 +9,7 @@ gem 'turbolinks'
 
 gem 'jbuilder', '~> 1.2'
 
-gem 'test' do
+group 'test' do
   gem 'database_cleaner'
   gem 'rspec-rails'
   gem 'cucumber-rails'
