@@ -3,10 +3,13 @@ require 'coderetreats'
 
 describe CoderetreatLive::Coderetreats do
   describe ".runnign_today" do
-    it "returns the collecion wrapped in the presenter" do
+    it "wraps coderetreats running today in a presenter" do
+      running_today = stub "running_today"
+      stub_const("::Coderetreat", stub(running_today: running_today))
+
       presenter = stub
 
-      CoderetreatLive::Coderetreats::Presenters::Collection.stub(:for) { presenter }
+      CoderetreatLive::Coderetreats::Presenters::Collection.stub(:for).with(running_today) { presenter }
       expect(CoderetreatLive::Coderetreats.running_today).to be(presenter)
     end
   end
