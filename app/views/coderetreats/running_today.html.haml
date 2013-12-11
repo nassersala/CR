@@ -6,9 +6,17 @@ There are no coderetreats running today
   %ul
     - @coderetreats.not_started do |coderetreat|
       %li.coderetreat= coderetreat.location
+
 %section.coderetreats.in_session
   %header
     %h2 In Session
   %ul
     - @coderetreats.in_session do |coderetreat|
+      %li.coderetreat= coderetreat.location
+
+%section.coderetreats.on_break
+  %header
+    %h2 On Break
+  %ul
+    - @coderetreats.on_break do |coderetreat|
       %li.coderetreat= coderetreat.location
