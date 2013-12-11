@@ -10,6 +10,6 @@ class CoderetreatsController < ApplicationController
         Coderetreat.new("not_started", "Chicago"),
         Coderetreat.new("in_session", "Berlin")
     ]
-    @coderetreats = CoderetreatLive::Coderetreats::Presenters::Collection.for(coderetreats)
+    @coderetreats = CoderetreatLive::Coderetreats.running_today
   end
 end
