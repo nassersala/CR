@@ -31,9 +31,6 @@ Given(/^a coderetreat that has not started$/) do
 end
 
 When(/^I start the coderetreat$/) do
-   caller.each do |k|
-    puts k
-  end
   visit edit_coderetreat_status_url(@coderetreat)
   click_on "Start Session"
 end
