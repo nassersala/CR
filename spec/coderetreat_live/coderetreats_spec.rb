@@ -1,5 +1,5 @@
 require 'coderetreats/presenters/collection'
-require 'coderetreats'
+require 'coderetreats_finder'
 
 describe CoderetreatLive::Coderetreats do
   describe ".runnign_today" do
