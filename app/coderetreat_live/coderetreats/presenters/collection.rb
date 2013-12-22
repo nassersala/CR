@@ -20,17 +20,9 @@ module CoderetreatLive
         end
 
         def grouped_by_status(&block)
-         self.class.all_statuses.each {|status| yield status, filtered_by_status(status).each(&block) }
-        end
-
-        self.all_statuses.each do |status|
-          define_method status do |&block|
-            in_status(status, &block)
+          self.class.all_statuses.each do |status| 
+            yield status, filtered_by_status(status)
           end
-        end
-
-        def in_status(status, &block)
-          self.coderetreats.select { |cr| cr.status == status }.each(&block)
         end
       end
     end
