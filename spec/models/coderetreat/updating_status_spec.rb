@@ -12,7 +12,7 @@ describe "Updating the status" do
   describe "#available_next_statuses" do
     it "does not include the current status" do
       coderetreat = Coderetreat.new status: "on_break"
-      expect(coderetreat.available_next_statuses).should_not include("on_break")
+      expect(coderetreat.available_next_statuses).not_to include("on_break")
     end
 
     it "includes the other statuses" do
